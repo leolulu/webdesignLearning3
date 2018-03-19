@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js复习</title>
+	<style type="text/css">
+		#con1{
+			height: 200px;
+			width: 200px;
+			background-color: gold;
+			margin:50px auto;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oCon1 = document.getElementById('con1');
+			oCon1.title = '这是要贯彻';
+			oCon1.style.border = '1px solid black';
+			oCon1.onclick = alarm01;
+
+			function alarm01(){
+				alert('show me the money');
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="con1"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transfrom测试</title>
+	<style type="text/css">
+		.con{
+			width: 250px;
+			height: 250px;
+			background-color: green;
+			margin:100px auto;
+			transition: all 400ms linear;
+		}
+		.con:hover{
+			/* transform:translate(10px,20px); */
+			/* transform:scale(1.1,1.2); */
+			/* transform:rotate(175deg); */
+			transform: skew(30deg) perspective(800px);
+		}
+	</style>
+</head>
+<body>
+	<div class="con"></div>
+</body>
+</html>

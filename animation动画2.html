@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation动画2</title>
+	<style type="text/css">
+		.con{
+			width: 125px;
+			height: 75px;
+			border-radius: 7%;
+			background-color: #92B901;
+			font:25px/75px '微软雅黑';
+			color: white;
+			text-align: center;
+			animation:mymove 4s infinite;
+			margin: 50px;
+			position: relative;
+		}
+
+		@keyframes mymove{
+			0%{
+				left: 0;
+				transform: rotateZ(0deg);
+				background-color: #92B901;
+			}
+			25%{
+				left: 0;
+				transform: rotateZ(15deg);
+			}
+			40%{
+				background-color: #21C7E1;
+			}
+			60%{
+				left: 500px;
+				transform: rotateZ(0deg);
+				background-color: #21C7E1;
+			}
+			100%{
+				left: 0;
+				transform: rotateZ(-360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="con">测试块</div>
+</body>
+</html>

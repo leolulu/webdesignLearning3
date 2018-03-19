@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定位</title>
+	<style type="text/css">
+	body{
+		margin: 0px;
+		background-color: #BBB;
+	}
+	.con{
+		width: 500px;
+		height: 500px;
+		border: 1px solid #000;
+		margin: 50px auto 0px;
+		background-color: #EEE;
+		position: relative;
+	}
+	.con div{
+		width: 100px;
+		height: 100px;
+		background-color: gold;
+		margin-top: 25px;
+		text-align: center;
+		font:18px/100px '微软雅黑';
+		color: blue;
+
+	}
+	body .box1{
+		/* margin: 0px; */
+		position: absolute;
+		left:25px;
+		top:25px;
+		background-color: green;
+	}
+	.box4{
+		/* margin-top: 50px; */
+		background-color: pink;
+		position: fixed;
+		left: 0px;
+		/* top:0px; */
+	}
+</style>
+</head>
+<body>
+	<div class="con">
+		<div class="box1">第1个div</div>
+		<div class="box2">第2个div</div>
+		<div class="box3">第3个div</div>
+	</div>
+	<div class="box4">第四个div</div>
+</body>
+</html>

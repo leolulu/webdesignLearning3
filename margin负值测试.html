@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>margin负值测试</title>
+	<style type="text/css">
+		.con{
+			width: 500px;
+			height: 500px;
+			margin: 50px auto;
+			border: 1px solid gold;
+			/* position: relative; */
+			overflow: hidden;
+		}
+
+		.con2{
+			list-style: none;
+			padding: 0;
+			position: relative;
+			left: -1px;
+		}
+
+		.con2 li{
+			float: left;
+			padding: 0 25px;
+			border-left: 1px solid green;
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<ul class="con2">
+			<li><a href="#"></a>一</li>
+			<li><a href="#"></a>二</li>
+			<li><a href="#"></a>三</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js条件语句</title>
+	<style type="text/css">
+	.con1{
+		height: 200px;
+		width: 200px;
+		background-color: gold;
+		margin:50px;
+	}
+	.con2{
+		height: 200px;
+		width: 200px;
+		background-color: green;
+		margin:50px;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		var num = 0;
+		var oBtn1 = document.getElementById('switch');
+		var oCon = document.getElementById('con');
+		oBtn1.onclick = function(){
+			if(oCon.className == 'con1')
+			{
+				oCon.className = 'con2';
+			}
+			else
+			{
+				oCon.className = 'con1';
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<div class="con1" id="con"></div>
+	<input type="button" name="" value="切换" id="switch">
+</body>
+</html>

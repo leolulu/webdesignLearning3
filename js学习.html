@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js学习</title>
+	<style type="text/css">
+		.con{
+			width: 	200px;
+			height: 200px;
+			margin: 50px auto;
+			background-color: gold;
+			animation: colorchange 5s infinite alternate ease-in-out;
+		}
+
+		#a1{
+			text-decoration: none;
+			animation: float_m 200ms infinite alternate linear;
+			margin:0px 500px;
+		}
+
+		@keyframes colorchange{
+			0%{
+				background-color: #008813;
+			}
+			50%{
+				background-color: yellow;
+			}
+			100%{
+				background-color: #21B416;
+				transform: rotateZ(360deg);
+			}
+		}
+
+		@keyframes float_m{
+			from{
+				float:left;
+			}
+			to{
+				float: right;
+			}
+		}
+	</style>
+
+	<script type="text/javascript">
+		window.onload = function(){
+
+			var oA1 =  document.getElementById('a1');
+			var oCon =  document.getElementById('con');
+			oA1.onclick = function(){
+				oCon.style.border = "3px solid black";
+			};
+			oCon.onclick = function(){
+				alert("我是一个con");
+			};
+
+		}
+
+		
+	</script>
+</head>
+<body>
+	<div class="con" id="con"></div>
+	<a href="#" id="a1">链接</a>
+</body>
+</html>

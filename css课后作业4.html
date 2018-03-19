@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css课后作业4</title>
+	<style type="text/css">
+		.main{
+			width: 958px;
+			/* height: 280px; */
+			/*如何把main窗口撑开*/
+			border: 1px solid #E2E2E2;
+			margin:50px auto;
+		}
+		.main .p_head{
+			width: 920px;
+			height: 49px;
+			border-bottom: 1px solid #E6E6E6;
+			margin: 0px 20px;
+		}
+		.main .p_head span{
+			font:bold 18px/50px '微软雅黑';
+			color: #000;
+			padding: 0px 20px;
+			display: inline-block;
+			border-bottom: 2px solid red;
+		}
+		.main .pic .p_body{
+			float:left;
+			margin: 12.5px 14.5px;
+		}
+		.main .pic{
+			margin-top: 10px;
+			margin-left: 6px;
+			padding-bottom: 5px;
+		}
+
+		.clearfix:after,.clearfix:before{ content: "";display: table;}
+		.clearfix:after{ clear:both;}
+		.clearfix{zoom:1;}
+	</style>
+</head>
+<body>
+	<div class="main clearfix">
+		<div class="p_head">
+			<span>图片展示</span>
+		</div>
+		<div class="pic clearfix">
+			<div class="p_body"><img src="欧洲杯.png" alt="欧洲杯"></div>
+			<div class="p_body"><img src="欧洲杯.png" alt="欧洲杯"></div>
+			<div class="p_body"><img src="欧洲杯.png" alt="欧洲杯"></div>
+			<div class="p_body"><img src="欧洲杯.png" alt="欧洲杯"></div>
+			<div class="p_body"><img src="欧洲杯.png" alt="欧洲杯"></div>
+			<div class="p_body"><img src="欧洲杯.png" alt="欧洲杯"></div>
+			<div class="p_body"><img src="欧洲杯.png" alt="欧洲杯"></div>
+			<div class="p_body"><img src="欧洲杯.png" alt="欧洲杯"></div>
+			<div class="p_body"><img src="欧洲杯.png" alt="欧洲杯"></div>
+		</div>
+	</div>
+</body>
+</html>

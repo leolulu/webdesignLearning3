@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css课后作业3</title>
+	<style type="text/css">
+		.navibar{
+			width: 960px;
+			height: 40px;
+			padding: 0px;
+			margin: 50px auto;
+			background-color: #55a8ea;
+			list-style: none;
+		}
+		.navibar li{
+			width: 100px;
+			height: 40px;
+			float:left;
+			text-align: center;
+		}
+		.navibar li a{
+			text-decoration: none;
+			font: 14px/40px '微软雅黑';
+			color: #FFF;
+		}
+		.navibar .highlight{
+			background-color: #00619f
+		}
+		.navibar .pic{
+			width: 24px;
+			height: 24px;
+			background: url(24x24-pin.png) no-repeat;
+			position: relative;
+			right: 263px;
+			bottom: 14px;
+		}
+		.navibar li:hover{
+			background-color: #00619f
+		}
+
+		.navibar .pic:hover{
+			background: url(24x24-pin.png) no-repeat;
+		}
+
+	</style>
+</head>
+<body>
+	<ul class="navibar">
+		<li class="highlight"><a href="#">首页</a></li>
+		<li><a href="#">网站建设</a></li>
+		<li><a href="#">程序开发</a></li>
+		<li><a href="#">网络营销</a></li>
+		<li><a href="#">企业VI</a></li>
+		<li><a href="#">案例展示</a></li>
+		<li><a href="#">联系我们</a></li>
+		<li class="pic"></li>
+	</ul>
+</body>
+</html>
