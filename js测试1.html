@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js测试1</title>
+	<style type="text/css">
+		#text1{
+			display: block;
+			margin-bottom: 10px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var text_str = document.getElementById('text1').value;
+			document.getElementById('button1').onclick = function(text_str){
+				alert(text_str);
+			}
+		}
+	</script>
+
+</head>
+<body>
+	<input type="text" name="" id="text1">
+	<input type="button" name="" id="button1" value="提交">
+</body>
+</html>

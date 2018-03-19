@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js计算器</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var method_selected = document.getElementById('')
+			document.getElementById('button1').onclick = function(){
+				if (document.getElementById('method').value=='plus')
+				{
+					document.getElementById('result').innerHTML = parseInt(document.getElementById('num1').value)+parseInt(document.getElementById('num2').value)
+				}
+				else if (document.getElementById('method').value=='minus')
+				{
+					document.getElementById('result').innerHTML = parseInt(document.getElementById('num1').value)-parseInt(document.getElementById('num2').value)
+				}
+				else if (document.getElementById('method').value=='multiply')
+				{
+					document.getElementById('result').innerHTML = parseInt(document.getElementById('num1').value)*parseInt(document.getElementById('num2').value)
+				}
+				else if (document.getElementById('method').value=='divide')
+				{
+					document.getElementById('result').innerHTML = parseInt(document.getElementById('num1').value)/parseInt(document.getElementById('num2').value)
+				}
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="num1">
+	<select name="" id="method">
+		<option value="plus">+</option>
+		<option value="minus">-</option>
+		<option value="multiply">×</option>
+		<option value="divide">÷</option>
+	</select>
+	<input type="text" name="" id="num2">
+	<input type="button" name="" id="button1" value="计算">
+	<p id="result">结果</p>
+</body>
+</html>

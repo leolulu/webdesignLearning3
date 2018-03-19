@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js数组去重</title>
+	<script type="text/javascript">
+		window.onload = function(){
+
+			var list1 = [1,2,3,4,4,3,2,1,2,3,4,5,6,5,5,3,3,4,2,1];
+			var list2 = [];
+			for (var i = 0;i<list1.length;i++)
+			{
+				if(list1.indexOf(list1[i])==i)
+				{
+					list2.push(list1[i]);
+				}
+			}
+			var p1 = document.getElementById('text');
+			p1.innerHTML = list2;
+		}
+	</script>
+</head>
+<body>
+	<p id="text"></p>
+</body>
+</html>
