@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filter测试</title>
+	<style type="text/css">
+		.pic{
+			animation: change 5s infinite linear;
+		}
+
+		@keyframes change{
+			0%{
+			filter:drop-shadow(0px 0px 0px #ABABAB);
+			}
+			50%{
+			filter:drop-shadow(25px 25px 5px #ABABAB);
+			}
+			100%{
+			filter:drop-shadow(50px 50px 15px #ABABAB);
+			}
+		}
+	</style>
+</head>
+<body>
+	<img src="../webdesignLearning2/雪碧图/images/Birthday-Floral-Vector-PNG.png" alt="魔法使的新娘" height="500px" class="pic">
+</body>
+</html>
