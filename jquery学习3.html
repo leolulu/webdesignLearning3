@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery学习3</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#button1').click(function(event) {
+				$('#con').addClass('move');
+			});
+			$('#button2').click(function(event) {
+				$('#con').removeClass('move');
+			});
+			$('#button3').click(function(event) {
+				$('#con').css({'background-color':'red','border':'2px solid black'});
+			});
+		})
+	</script>
+	<style type="text/css">
+		.con{
+			width: 100px;
+			height: 100px;
+			background-color: cyan;
+			position: relative;
+		}
+		.move{
+			animation: movemove 10s infinite ease-in-out;			
+		}
+
+		@keyframes movemove{
+			0%{
+				left: 0;
+				top: 0;
+			}
+			25%{
+				left: 500px;
+				top: 250px;
+				transform: rotateZ(360deg);
+			}
+			50%{
+				left: 100px;
+				top: 300px;
+
+				transform: rotateZ(-90deg);
+			}
+			75%{
+				left: 500px;
+				top: 500px;
+				transform: rotateZ(360deg);
+			}
+			100%{
+				left: 0;
+				top: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="con" id="con"></div>
+	<button id="button1">添加</button>
+	<button id="button2">删除</button>
+	<button id="button3">变色</button>
+</body>
+</html>

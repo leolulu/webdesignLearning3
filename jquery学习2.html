@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery学习2</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			/*$('#button').click(function(){
+				alert($('#text').attr('name'));
+			})*/
+			$('#button').click(function(){
+				$('.con').html('ho');
+			})
+		})
+	</script>
+</head>
+<body>
+	<input type="text" name="leo" id="text">
+	<button id="button">测试</button>
+	<div class="con"></div>
+</body>
+</html>

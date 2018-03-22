@@ -5,10 +5,50 @@
 	<title>jquery学习</title>
 	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 	<script type="text/javascript">
-		alert($);
+		$(function(){
+
+			$('.tabs div').click(function(){
+
+				$(this).css({backgroundColor:'#E1D3B6'}).siblings().css({backgroundColor:'#DCC087'});
+				$('.con .content').eq($(this).index()).css({display:'block'}).siblings().css({display:'none'});
+
+			})
+
+
+
+
+		})
+	
 	</script>
+
+	<style type="text/css">
+		.tabs div{
+			display: inline-block;
+			background-color: #DCC087;
+			padding: 15px 35px;
+		}
+		.con{
+			background-color: #FFE9A3;
+			height: 298px;
+			width: 462px;
+		}
+		.con div{
+			line-height: 298px;
+			text-align:center;
+			display: none;
+		}
+	</style>
 </head>
 <body>
-	
+	<div class="tabs">
+		<div>tab1</div>
+		<div>tab2</div>
+		<div>tab3</div>
+	</div>
+	<div class="con">
+		<div class="content"><img src="../webdesignLearning2/image/包包.png" alt=""></div>
+		<div class="content"><img src="../webdesignLearning2/image/御姐潮妆日记.png" alt=""></div>
+		<div class="content"><img src="../webdesignLearning2/image/衣服.png" alt=""></div>
+	</div>
 </body>
 </html>
