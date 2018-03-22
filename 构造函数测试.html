@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>构造函数测试</title>
+	<script type="text/javascript">
+		window.onload = function(){
+
+			function wow(food){
+				this.food = food;
+				this.tellme = function(){
+					alert('i eat '+food);
+				}
+			}	
+
+			var btn1 = document.getElementById('button1');
+			var text1 = document.getElementById('text1');
+			var p1 = document.getElementById('p1');
+
+			document.querySelectorAll('')
+
+			btn1.onclick = function(){
+				var i1 = new wow(text1.value);
+				p1.innerHTML += i1.food;
+				i1.tellme;
+			}
+
+
+
+
+
+
+
+
+		}
+
+
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="text1">
+	<input type="button" name="" id="button1" value="看看">
+	<p id="p1"></p>
+</body>
+</html>
