@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery滑动</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<style type="text/css">
+	.con{
+		display: inline-block;
+		margin:50px auto;
+		/* border:1px dotted green; */
+		padding: 10px;
+	}
+	.flip{
+		width: 550px;
+		height: 50px;
+		background-color: gold;
+		font:bold 20px/50px '微软雅黑';
+		text-align: center;
+		animation: colorchange 1s infinite alternate linear;
+	}
+	.panel{
+		width: 550px;
+		height: 250px;
+		background-color: pink;
+		text-align: center;
+		font:120px/250px '微软雅黑';
+		color: #E5EECC;
+		display: none;
+	}
+	@keyframes colorchange
+	{
+		0%{
+			font-size: 15px;
+			color: #1C6FE8;
+		}
+		100%{
+			font-size: 30px;
+			color: #218835;
+		}
+	}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$('#flip').click(function(event) {
+			$('#panel').slideToggle(1000);
+		});
+	})
+</script>
+</head>
+<body>
+	<div class="con">
+		<div class="flip" id="flip">点击下拉/折叠</div>
+		<div class="panel" id="panel">内容</div>
+	</div>
+</body>
+</html>

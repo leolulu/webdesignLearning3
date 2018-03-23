@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手风琴</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<style type="text/css">
+		.con div span{
+			width: 20px;
+			height: 360px; 
+			display: inline-block;
+			text-align: center;
+		}
+		.con div img{
+			vertical-align: top;
+		}
+		.con{
+			height: 360px;
+			width: 740px;
+			position: relative;
+			overflow: hidden;
+		}
+		.con div{position: absolute;}
+		.con div:nth-of-type(1){left:0px;}
+		.con div:nth-of-type(2){left:20px;}
+		.con div:nth-of-type(3){left:40px;}
+		.con div:nth-of-type(4){left:60px;}
+		.con div:nth-of-type(5){left:80px;}
+		.con1 span{background-color: #FF0000;}
+		.con2 span{background-color: #C2D5E6;}
+		.con3 span{background-color: #FF7400;}
+		.con4 span{background-color: #CD0074;}
+		.con5 span{background-color: #00CC00;}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$('span').click(function(event) {
+				$('p').html($(this).index());
+			});
+		})
+	</script>
+</head>
+<body>
+	<div class="con">
+		<div class="con1"><span>金色树林</span><img src="images/bpic5507.jpg" alt="" width="640px" height="360px"></div>
+		<div class="con2"><span>彼岸花</span><img src="images/fpic638.jpg" alt="" width="640px" height="360px"></div>
+		<div class="con3"><span>银河系</span><img src="images/fpic7094.jpg" alt="" width="640px" height="360px"></div>
+		<div class="con4"><span>银河</span><img src="images/fpic7424.jpg" alt="" width="640px" height="360px"></div>
+		<div class="con5"><span>水岸</span><img src="images/zzpic10644.jpg" alt="" width="640px" height="360px"></div>
+	</div>
+	<p></p>
+</body>
+</html>

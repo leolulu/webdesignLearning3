@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery隐藏显示</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<style type="text/css">
+		.con{
+			height: 200px;
+			width: 200px;
+			background-color: gold;
+			margin:50px auto;
+		}
+		#text{
+			margin-top:10px;
+		}
+	}
+</style>
+<script type="text/javascript">
+		/*$(function(){
+			$('#button1').click(function(){
+				$('#con').hide(1000);	
+			});
+			$('#button2').click(function(){
+				$('#con').show(1000);	
+			});
+		})*/
+		/*$(function(){
+			$("#button3").click(function(){
+				$("#con").toggle(1000,toggle_finish);
+			})
+
+			function toggle_finish(){
+				alert("已切换！");
+			}
+		})*/
+		/*$(function(){
+			$("#button1").click(function(){
+				$(this).html('淡入');
+				$("#con").fadeIn(2000);
+			})
+			$("#button2").click(function(){
+				$(this).html('淡出');
+				$("#con").fadeOut(2000);
+			})
+			$("#button3").click(function(){
+				$(this).html('切换');
+				$("#con").fadeToggle(2000,finish);
+			})
+			$('#button4').click(function(){
+				$(this).html($('#text').val());
+				$('#con').fadeTo(2000,$('#text').val());
+			})
+
+			function finish(){
+				alert("已切换！");
+			}
+		})*/
+
+		$(function(){
+			$("#button1").click(function(){
+				$(this).html('向下滑动');
+				$("#con").slideDown(2000);
+			})
+			$("#button2").click(function(){
+				$(this).html('淡出');
+				$("#con").fadeOut(2000);
+			})
+			$("#button3").click(function(){
+				$(this).html('切换');
+				$("#con").fadeToggle(2000,finish);
+			})
+			$('#button4').click(function(){
+				$(this).html($('#text').val());
+				$('#con').fadeTo(2000,$('#text').val());
+			})
+
+			function finish(){
+				alert("已切换！");
+			}
+		})
+</script>
+</head>
+<body>
+	<div class="con" id="con"></div>
+	<button id="button1">隐藏</button>
+	<button id="button2">显示</button>
+	<button id="button3">切换</button>
+	<br>
+	<input type="text" name="" id="text">
+	<button id="button4">fadeTo</button>
+</body>
+</html>

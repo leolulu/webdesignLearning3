@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery滑动2</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<style type="text/css">
+	.con{
+		display: inline-block;
+		margin:50px 300px;
+		/* border:1px dotted green; */
+		padding: 10px;
+	}
+	.flip{
+		width: 300px;
+		height: 50px;
+		background-color: gold;
+		font:bold 20px/50px '微软雅黑';
+		text-align: center;
+		/* animation: colorchange 1s infinite alternate linear; */
+	}
+	.panel{
+		width: 300px;
+		/* height: 250px; */
+		background-color: pink;
+		text-align: center;
+		font:120px/250px '微软雅黑';
+		color: #E5EECC;
+		display: none;
+	}
+	@keyframes colorchange
+	{
+		0%{
+			font-size: 15px;
+			color: #1C6FE8;
+		}
+		100%{
+			font-size: 30px;
+			color: #218835;
+		}
+	}
+	.panel a{
+		font: 20px/20px '微软雅黑';
+		display: block;
+		text-decoration: none;
+		background-color: lightgray;
+		padding:30px 0;
+		color:black;
+	}
+	.panel a:hover{
+		background-color: #EBE9E9;
+	}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$('.con').hover(
+			function(){
+			$('#panel').slideDown(300)
+			},
+			function(){
+			$('#panel').slideUp(300)
+				}
+		);
+	})
+</script>
+</head>
+<body>
+	<div class="con">
+		<div class="flip" id="flip">悬浮下拉/折叠</div>
+		<div class="panel" id="panel">
+			<a href="#">数据宝1</a>
+			<a href="#">数据宝2</a>
+			<a href="#">数据宝3</a>
+		</div>
+	</div>
+</body>
+</html>
