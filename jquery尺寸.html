@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery尺寸</title>
+	<style type="text/css">
+		.con{
+			width: 100px;
+			height: 100px;
+			padding: 50px;
+			border:10px solid black;
+			margin:50px;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').click(function(){
+				$('p').text($(window).height());
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="con">哦</div>
+	<button>获取</button>
+	<p></p>
+</body>
+</html>

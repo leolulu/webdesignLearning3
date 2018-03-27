@@ -18,7 +18,7 @@
 			height: 360px;
 			width: 740px;
 			position: relative;
-			overflow: hidden;
+			/* overflow: hidden; */
 		}
 		.con div{position: absolute;}
 		.con div:nth-of-type(1){left:0px;}
@@ -34,8 +34,9 @@
 	</style>
 	<script type="text/javascript">
 		$(function(){
-			$('span').click(function(event) {
+			$('.con div').click(function(event) {
 				$('p').html($(this).index());
+				$(this).next().animate({left:200},2000);
 			});
 		})
 	</script>

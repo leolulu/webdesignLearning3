@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery页面滚动固定</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function() {
+				if($(document).scrollTop()>500)
+				{
+					$('.selecter').css({
+						position: 'fixed',
+						top: 0,
+						left:'50%',
+						transform: 'translateX(-50%)'
+					});
+				}
+				else
+				{
+					$('.selecter').css({
+						position:'static',
+						marginLeft:'auto'
+					});
+				}
+			});
+		})
+	</script>
+	<style type="text/css">
+	body{
+		margin:0;
+	}
+		.header{
+			width: 1000px;
+			height: 500px;
+			margin:0 auto;
+			background-color: #CCC;	
+		}
+		.selecter{
+			width: 1000px;
+			height: 60px;
+			margin:0 auto;
+			background-color: #BBB;	
+			transform: translateY(-50%);
+		}
+		.long{
+			width: 1000px;
+			height: 3000px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="selecter"></div>
+	<div class="long"></div>
+</body>
+</html>

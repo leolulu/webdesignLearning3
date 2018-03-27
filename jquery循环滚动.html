@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery循环滚动</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<style type="text/css">
+		.con{
+			border:1px solid green;
+			position: relative;
+			width: 571px;
+			height: 120px;
+			margin:50px;
+			overflow: hidden;
+		}
+		.list{
+			width: 1200px;
+			list-style: none;
+			padding: 5px;
+			margin:0;
+			position: absolute;
+			display: inline;
+			left:0;
+		}
+		.list li{
+			float:left;
+			width: 100px;
+			height: 100px;
+			border:1px solid green;
+			margin: 5px;
+			text-align: center;
+			font:40px/100px '微软雅黑';
+		}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			var left = 0;
+			var timer = setInterval(move,30);
+			function move(){
+				left -= 1;
+				if(left<-559)
+				{
+					left=0;
+				}
+				$('.list').css({left:left});
+			}
+
+			$('.list').hover(function() {
+				clearInterval(timer);
+				console.log(1);
+			}, function() {
+				timer = setInterval(move,30);
+				console.log(2);
+			});
+
+			$('.list').html($('.list').html()+$('.list').html());
+		})
+	</script>
+</head>
+<body>
+	<div class="con">
+		<ul class="list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+	<button>开始</button>
+</body>
+</html>
