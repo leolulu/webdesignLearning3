@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery事件冒泡</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<style type="text/css">
+		div{
+			padding: 10px;
+			border:3px solid gray;
+		}
+		.con3{
+			width: 200px;
+			height: 200px;
+		}
+		.con2{
+			width: 300px;
+			height: 300px;
+		}
+		.con1{
+			width: 400px;
+			height: 400px;
+		}
+		.move{
+			width: 100px;
+			height: 100px;	
+			position: relative;
+			border:0;
+			background-color: gray;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$('.con1').click(function(shit) {
+				alert('con1');
+				console.log(shit);
+			});
+			$('.con2').click(function(fuck) {
+				alert('con2');
+				console.log(fuck);
+			});
+			$('.con3').click(function(pussy) {
+				/*alert('con3');*/
+				console.log(pussy);
+				$('.con1,.con2').unbind();
+				alert(pussy.offsetX);
+			});
+			$('.move').mousemove(function(event) {
+				console.log(event.offsetX+'-'+event.offsetY)
+				$(this).stop().animate({left: event.offsetX-50, top: event.offsetY-50}, 10)
+				event.stopPropagation();
+			});
+		})
+	</script>
+</head>
+<body>
+	<div class="con1">con1
+		<div class="con2">con2
+			<div class="con3">con3</div>
+		</div>
+	</div>
+
+	<div class="move"></div>
+</body>
+</html>

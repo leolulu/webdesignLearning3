@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery阻止右键</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<style type="text/css">
+		.list{
+			list-style: none;
+			width: 250px;
+			background-color: #FFFDFD;
+			display: none;
+			position: fixed;
+			margin:0;
+			padding: 0;
+
+		}
+		.list li{
+			height: 30px;
+			border:1px solid black;
+			margin-top: -1px;
+			font:16px/30px '微软雅黑';
+			text-indent: 30px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).contextmenu(function(ev){
+			ev.preventDefault();
+			$('#list').css({display:'block',top:ev.clientY,left:ev.clientX});
+		})
+		$(document).click(function(event) {
+			$('#list').css({display:'none'});
+		});
+		$(function(){
+			$('button').click(function(){
+				console.log('1');
+				console.log(document.length);
+				console.log('2');
+			})
+		})
+
+	</script>
+</head>
+<body>
+	<ul id="list" class="list">
+		<li>右键想干什么？</li>
+		<li>想看源代码？</li>
+		<li>还是想审查元素？</li>
+	</ul>
+	<button>弹出</button>
+</body>
+</html>

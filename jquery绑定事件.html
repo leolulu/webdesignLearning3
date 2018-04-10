@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery绑定事件</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').bind('click', function(event) {
+				$(this).css({margin:'50px'});
+			});
+		})
+	</script>
+</head>
+<body>
+	<button>按钮</button>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>整屏滚动</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+	<script type="text/javascript">
+		$(window).resize(function(event) {
+			$('#p1').html($(this).width()+' x '+$(this).height());
+			$('#back1').css({width:$(this).width(),height:$(this).height()});
+			$('#back2').css({width:$(this).width(),height:$(this).height(),top:$(this).height()*1});
+			$('#back3').css({width:$(this).width(),height:$(this).height(),top:$(this).height()*2});
+		});
+		$(function(){
+			$(window).mousewheel(function(envet,dat){
+				$('#p1').html(dat);
+			})
+
+		})
+	</script>
+	<style type="text/css">
+		body{
+			margin:0;
+		}
+		.pages div{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 0;
+			top:0;
+
+		}
+		.back1{background-color: #EEF1F1;}
+		.back2{background-color: #F3E2DD;}
+		.back3{background-color: #DDE9F3;}
+	</style>
+</head>
+<body>
+	<p id="p1"></p>
+	<button id="button1">按钮</button>
+	<div class="pages">
+		<div class="back1" id="back1"></div>
+		<div class="back2" id="back2"></div>
+		<div class="back3" id="back3"></div>
+	</div>
+</body>
+</html>
